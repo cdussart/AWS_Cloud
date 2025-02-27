@@ -1,0 +1,10 @@
+#!/bin/bash
+yum install -y nginx
+systemctl enable nginx # allows nginx to start automatically upon system boot (including restarts)
+systemctl start nginx
+
+# The script assumes that the instance is running a Linux distribution that uses the yum package manager, like Amazon Linux. If you’re using a different distribution, you may need to use a different package manager like apt-get for Ubuntu/Debian-based systems or dnf for Fedora-based systems.
+
+# Additionally, the script assumes that the necessary repositories and dependencies are already configured on the instance to allow for the installation of Nginx. In some cases, additional configuration may be required to set up the necessary repositories before using yum to install packages.
+
+# Finally, this file should be saved in the plain text format and passed as user data when launching the EC2 instance. AWS runs the user data script automatically during instance initialization.
